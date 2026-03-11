@@ -1,0 +1,12 @@
+const mongoose = require("mongoose");
+const uniqueValidator = require("mongoose-unique-validator").default;
+
+const userSchema = new mongoose.Schema({
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+});
+
+// Ici uniqueValidator est bien une fonction
+userSchema.plugin(uniqueValidator);
+
+module.exports = mongoose.model("User", userSchema);
