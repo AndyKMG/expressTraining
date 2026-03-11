@@ -13,7 +13,7 @@ mongoose
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch((err) => {
     console.log("Connexion à MongoDB échouée !");
-    // console.error(err);
+    console.error(err);
     // Very usefull to log the error details for debugging, but be careful not to log sensitive information in production environments.
   });
 
